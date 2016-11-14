@@ -12,7 +12,7 @@
     <div style="border: 1px solid black">
         <table align="center" style="width:40%">
             <tbody>
-            {% for movie_title in movies %}
+            {% for movie_id, movie_title in movies %}
                 <div>
                     <tr>
                         <td class="image" rowspan="2">
@@ -22,7 +22,7 @@
                     </tr>
                     <tr>
                         <td><b>Rating: </b>
-                        <select name="item_condition">
+                        <select name={{movie_id}}>
                             <option value="0">N/A</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
